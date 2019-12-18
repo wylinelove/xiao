@@ -1,0 +1,54 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+<!-- 轮播图区域 -->
+<view class="slide">
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <swiper-item wx:for="{{imgs}}" wx:key="id">
+      <image src="{{item.images.small}}" mode="aspectFill"/>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 中部轮播图区域 -->
+<view class="board" scroll-y="true">
+  <!-- 轮播图左上角标题 -->
+  <block wx:for="{{txt}}" wx:key="key">
+    <view class="board-item">
+      <!-- 导航 -->
+      <navigator url="../list/list?type={{ item.key }}&title={{ item.title }}" hover-class="none">
+        <view class="title">
+          <text>{{ item.title }}</text>
+          <!-- <image src="{{item.images.small}}" mode="aspectFill"/> -->
+        </view>
+      </navigator>
+      <scroll-view class="content" scroll-x="true">
+        <view class="inner">
+          <navigator wx:for="{{ list}}" wx:key="id" url="../item/item?id={{ item.id }}">
+            <view class="movie-item">
+              <image src="{{ item.images.small }}" mode="aspectFill"/>
+              <text>{{ item.title }}</text>
+            </view>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </block>
+</view>
+
+<!-- 一部电影区域 -->
+<view class="movie" wx:for="{{list}}" wx:key="index">
+  <!-- 左侧 电影图片（海报） -->
+  <image class="movie-img" src="{{item.images.small}}"></image>
+  <!-- 右侧 电影介绍 -->
+  <view class="movie-info">
+    <!--      标题 -->
+    <view class="movie-title">{{item.title}}</view>
+    <!--      评分 -->
+    <view class="movie-score">{{item.rating.average}}</view>
+    <!--      主演 -->
+    <view>{{item.casts[0].name}}</view>
+    <!--      年份 -->
+    <view>{{item.year}}</view>
+    <!--      详情按钮 -->
+    <button class="movie-comment" bindtap="jumpComment" data-id="{{item.id}}">详情</button>
+  </view>
+</view>

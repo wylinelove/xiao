@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/comment/comment",
+    "pages/profile/profile",
+    "pages/mymovie/mymovie",
+    "pages/map/map"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "阿六评分",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "images/1.png",
+      "selectedIconPath": "images/1_active.png"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "个人中心",
+      "iconPath": "images/2.png",
+      "selectedIconPath": "images/2_active.png"
+    },
+    {
+      "pagePath": "pages/map/map",
+      "text": "个人中心",
+      "iconPath": "images/3.png",
+      "selectedIconPath": "images/3_active.png"
+    },
+    {
+      "pagePath": "pages/mymovie/mymovie",
+      "text": "我的",
+      "iconPath": "images/m_active.png",
+      "selectedIconPath": "images/m.png"
+    }]
+  }
+}

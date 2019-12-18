@@ -1,0 +1,51 @@
+/* miniprogram/pages/comment.wxss */
+/* 1.背景图片 */
+.detail-container{
+  height: 400rpx;
+  opacity: .9; /*透明度*/
+  filter: blur(40rpx); /*模糊滤镜*/
+}
+/* 2.遮罩层 */
+.detail-mask{
+  width: 100%;
+  height: 400rpx;
+  background: #333;
+  position: absolute;
+  left: 0;top: 0;
+  z-index: -1;
+}
+/* 3.电影详情信息 */
+.detail-info{
+  /* 显示到模糊图片上方 */
+  position: absolute;/*绝对定位*/
+  top: 0;left: 0;
+  width: 100%;
+  height: 400rpx;
+  display: flex;/*弹性布局*/
+  padding: 20rpx;/*四个边加内边距*/
+}
+/* 4.左边图片大小 */
+.detail-img{
+  width: 280rpx;
+  height: 90%;
+  margin-right: 24rpx;/*右侧间距文字*/
+}
+/* 5.右侧 电影内容 */
+.detail{
+  line-height: 60rpx; /*行高*/
+}
+.detail view{
+  color:#fff;
+  font-size: 24rpx;
+}
+/* 评分字体颜色大小 */
+.detail .detail-score{
+  color: #fc0;
+  font-size:36rpx;
+}
+/* 电影描述 */
+.desc{
+  color: #555;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
